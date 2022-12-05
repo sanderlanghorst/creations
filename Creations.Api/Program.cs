@@ -1,3 +1,7 @@
+
+using Microsoft.AspNetCore.Identity;
+using Creations.DummyInfra;
+
 namespace Creations.Api
 {
     public class Program
@@ -12,6 +16,10 @@ namespace Creations.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<Creations.Core.Abstractions.IUserStore, DummyUserStore>();
+            builder.Services.AddScoped<Creations.Core.Abstractions.ICreationStore, DummyCreationsStore>();
+            builder.Services.AddScoped<Creations.Core.Abstractions.IFileStore, DummyFileStore>();
 
             var app = builder.Build();
 
@@ -31,5 +39,6 @@ namespace Creations.Api
 
             app.Run();
         }
+
     }
 }

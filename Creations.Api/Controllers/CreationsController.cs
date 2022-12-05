@@ -5,13 +5,13 @@ namespace Creations.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize(Roles ="Admin")]
-    public class AdminController : ControllerBase
+    [Authorize(Roles = "User")]
+    public class CreationsController : ControllerBase
     {
 
         private readonly ILogger<AdminController> _logger;
 
-        public AdminController(ILogger<AdminController> logger)
+        public CreationsController(ILogger<AdminController> logger)
         {
             _logger = logger;
         }

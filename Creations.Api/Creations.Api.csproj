@@ -13,4 +13,14 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Creations.Application\Creations.Application.csproj" />
+    <ProjectReference Include="..\Creations.Core\Creations.Core.csproj" />
+    <ProjectReference Include="..\Creations.DummyInfra\Creations.DummyInfra.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Auth\" />
+  </ItemGroup>
+
 </Project>
