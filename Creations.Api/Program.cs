@@ -1,6 +1,8 @@
 
 using Microsoft.AspNetCore.Identity;
 using Creations.DummyInfra;
+using Microsoft.AspNetCore.Authentication;
+using Creations.Api.Auth;
 
 namespace Creations.Api
 {
@@ -20,6 +22,8 @@ namespace Creations.Api
             builder.Services.AddScoped<Creations.Core.Abstractions.IUserStore, DummyUserStore>();
             builder.Services.AddScoped<Creations.Core.Abstractions.ICreationStore, DummyCreationsStore>();
             builder.Services.AddScoped<Creations.Core.Abstractions.IFileStore, DummyFileStore>();
+            builder.Services.AddAuthentication("BasicAuthentication")
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
 
             var app = builder.Build();
 

@@ -15,5 +15,7 @@ namespace Creations.Core.Abstractions
         bool UpdateUser(IUser user);
 
         bool DeleteUser(int id);
+
+        Task<bool> Authenticate(string username, string password);
     }
 }

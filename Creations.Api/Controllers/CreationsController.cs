@@ -16,7 +16,7 @@ namespace Creations.Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "Get")]
+        [HttpGet(Name = "GetCreation")]
         public object Get()
         {
             return new { };

@@ -16,10 +16,10 @@ namespace Creations.Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "Get")]
-        public object Get()
+        [HttpGet(Name = "GetCategories")]
+        public IEnumerable<object> GetCategories()
         {
-            return new { };
+            return new List<object>();
         }
     }
 }
