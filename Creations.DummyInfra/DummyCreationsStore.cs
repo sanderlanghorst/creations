@@ -29,6 +29,11 @@ namespace Creations.DummyInfra
             throw new NotImplementedException();
         }
 
+        public ICreation GetCreation(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public ICollection<ICreation> GetCreations(IUser user)
         {
             throw new NotImplementedException();

@@ -8,6 +8,7 @@ namespace Creations.Core.Abstractions
 {
     public interface ICreationStore
     {
+        ICreation GetCreation(int id);
         ICollection<ICreation> GetCreations(IUser user);
         bool InsertCreation(ICreation creation);
         bool UpdateCreation(ICreation creation);
